@@ -141,114 +141,30 @@
                                                        </ul>
                                                   </div>
                                              </div>
-                                             <div class="tab-pane fade" role="tabpanel" id="stepper-step-3">
-                                                  <div class="p-20">
-                                                       <header>
-                                                            <h3 class="hs">3. Agende su cita</h3>
-                                                       </header>
-
-                                                       <section class="stepper-body">
-                                                            <p class="alert alert-success" style="color: white;background-color: #26a69acc;">NOTA: Sólo se agendará la cita, si la fecha y la hora seleccionadas, son mayor a la hora actual</p>
-
-                                                             <!-- Fecha de la Cita -->
-                                                            <div class="form-group is-empty">
-                                                                 <label for="datepicker-theme" class="control-label">Escoja la fecha para su cita:</label>
-                                                                 <div class="input-group">
-                                                                      <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
-                                                                      <input  class="form-control datepicker"  type="date" placeholder="Seleccionar fecha" name="fecha_cita" value="{{old('fecha_cita')}}">
-
-                                                                 </div>
-                                                            </div>
-                                                            <!-- Hora de la cita -->
-                                                            <div class="form-group">
-                                                                 <label for="radio" class="control-label">Escoja la hora de su preferencia</label>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_cita" value="09:00:00">09:00 a.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_cita"  value="09:30:00">
-                                                                           09:30 a.m.
-                                                                      </label>
-                                                                 </div>
-
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_cita" value="10:00:00">10:00 a.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_cita"  value="10:30:00">
-                                                                           10:30 a.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_cita" value="11:00:00">11:00 a.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_cita"  value="11:30:00">
-                                                                           11:30 a.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_cita" value="12:00:00">12:00 a.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_cita"  value="12:30:00">
-                                                                           12:30 p.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <hr>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_cita" value="13:00:00">01:00 p.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_cita"  value="13:30:00">
-                                                                           01:30 p.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_cita" value="14:00:00">02:00 p.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_cita"  value="14:30:00">
-                                                                           02:30p.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_cita" value="15:00:00">03:00 p.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_cita"  value="15:30:00">
-                                                                           03:30p.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_cita" value="16:00:00">04:00 p.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_cita"  value="16:30:00">
-                                                                           04:30p.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_cita" value="17:00:00">05:00 p.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_cita"  value="17:30:00">
-                                                                           05:30p.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_cita" value="18:00:00">06:00 p.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_cita"  value="18:30:00">
-                                                                           06:30p.m.
-                                                                      </label>
-                                                                 </div>
-                                                            </div>
-                                                       </section>
-                                                  </div>
-                                                  <div class="modal-footer">
-                                                       <ul class="list-inline pull-right">
-                                                            <li>
-                                                                 <a class="btn btn-default prev-step">Atrás</a>
-                                                            </li>
-                                                            <li>
-                                                                 <a class="btn btn-primary next-step">Siguiente</a>
-                                                            </li>
-
-                                                       </ul>
-                                                  </div>
-                                             </div>
+                                            <div class="tab-pane fade" role="tabpanel" id="stepper-step-3">
+                                                <div class="p-20">
+                                                    <header>
+                                                        <h3 class="hs">3. Agende su cita</h3>
+                                                    </header>
+                                                    <section class="stepper-body">
+                                                        <div id="app">
+                                                            <citas></citas>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <ul class="list-inline pull-right">
+                                                        <li>
+                                                                <a class="btn btn-default prev-step">Atrás</a>
+                                                        </li>
+                                                        <li>
+                                                                <a  class="btn btn-primary next-step" >Siguiente</a>
+                                                                
+                                                        </li>
+                
+                                                    </ul>
+                                                </div>
+                                            </div>
                                              <div class="tab-pane fade" role="tabpanel" id="stepper-step-4">
                                                   <div class="p-20">
                                                        <header>
@@ -618,90 +534,29 @@
                                                   </div>
                                              </div>
                                              <div class="tab-pane fade" role="tabpanel" id="stepper-step-7">
-                                                  <div class="p-20">
-                                                       <header>
-                                                            <h3 class="hs">3. Agende su cita</h3>
-                                                       </header>
+                                                <div class="p-20">
+                                                     <header>
+                                                          <h3 class="hs">3. Agende su cita</h3>
+                                                     </header>
 
-                                                       <section class="stepper-body">
-                                                            <p class="alert alert-success" style="color: white;background-color: #26a69acc;">NOTA: Sólo se agendará la cita, si la fecha y la hora seleccionadas, son mayor a la hora actual</p>
+                                                     <section class="stepper-body">
+                                                        <div id="root">
+                                                            <peluqueria></peluqueria>{{--  Componente Vue  --}}
+                                                        </div>
 
-                                                            <!-- Fecha cita Peluqueria -->
-                                                            <div class="form-group is-empty">
-                                                                 <label for="datepicker-theme" class="control-label">Escoja la fecha para su cita:</label>
-                                                                 <div class="input-group">
-                                                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar"></i></span>
-                                                                    <input type="text" class="form-control datepicker" id="end_date" type="date" placeholder="Seleccionar fecha" name="fecha_peluqueria">
-                                                               </div>
-                                                          </div>
-                                                            <!-- Hora de la cita -->
-                                                            <div class="form-group">
-                                                                 <label for="radio" class="control-label">Escoja la hora de su preferencia</label>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_peluqueria" value="09:00:00">09:00 a.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_peluqueria"  value="09:30:00">
-                                                                           09:30 a.m.
-                                                                      </label>
-                                                                 </div>
-
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_peluqueria" value="10:00:00">10:00 a.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_peluqueria"  value="10:30:00">
-                                                                           10:30 a.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_peluqueria" value="11:00:00">11:00 a.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_peluqueria"  value="11:30:00">
-                                                                           11:30 a.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_peluqueria" value="12:00:00">12:00 a.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_peluqueria"  value="12:30:00">
-                                                                           12:30 p.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <hr>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_peluqueria" value="13:00:00">01:00 p.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_peluqueria"  value="13:30:00">
-                                                                           01:30 p.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_peluqueria" value="14:00:00">02:00 p.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_peluqueria"  value="14:30:00">
-                                                                           02:30 p.m.
-                                                                      </label>
-                                                                 </div>
-                                                                 <div class="radio block">
-                                                                      <label><input type="radio" name="hora_peluqueria" value="15:00:00">03:00 p.m.</label>
-                                                                      <label class="radio-inline">
-                                                                           <input type="radio" name="hora_peluqueria"  value="15:30:00">
-                                                                           03:30 p.m.
-                                                                      </label>
-                                                                 </div>
-                                                            </div>
-                                                       </section>
-                                                  </div>
-                                                  <div class="modal-footer">
-                                                       <ul class="list-inline pull-right">
-                                                            <li>
-                                                                 <a class="btn btn-default prev-step">Atrás</a>
-                                                            </li>
-                                                            <li>
-                                                                 <a class="btn btn-primary next-step">Siguiente</a>
-                                                            </li>
-                                                       </ul>
-                                                  </div>
-                                             </div>
+                                                     </section>
+                                                </div>
+                                                <div class="modal-footer">
+                                                     <ul class="list-inline pull-right">
+                                                          <li>
+                                                               <a class="btn btn-default prev-step">Atrás</a>
+                                                          </li>
+                                                          <li>
+                                                               <a class="btn btn-primary next-step">Siguiente</a>
+                                                          </li>
+                                                     </ul>
+                                                </div>
+                                           </div> 
                                              <div class="tab-pane fade" role="tabpanel" id="stepper-step-8">
                                                   <div class="p-20">
                                                        <header>

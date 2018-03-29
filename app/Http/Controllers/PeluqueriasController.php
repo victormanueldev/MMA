@@ -61,8 +61,14 @@ class PeluqueriasController extends Controller
         $horaActual = $ahora->toTimeString();//Obtener solo la hora
 
         //Validar que la hora de la cita sea mayor a la actual
-      if ($request->fecha_peluqueria == $fechaActual && $request->hora_peluqueria < $horaActual) {
+        if ($request->fecha_peluqueria == $fechaActual && $request->hora_peluqueria < $horaActual) {
             \Flash::error('No se puede agendar una cita en horas anteriores a la actual');//Mensaje de Error
+            return redirect('/confirmar-cita/'.$request->id_mascota);
+        }
+
+        //Validar que la fecha de la cita sea mayor a la actual
+        if ($request->fecha_peluqueria < $fechaActual) {
+            \Flash::error('No se puede agendar una cita en una fecha anterior a la actual');//Mensaje de Error
             return redirect('/confirmar-cita/'.$request->id_mascota);
         }
 
@@ -174,5 +180,18 @@ class PeluqueriasController extends Controller
                             ->where('peluqueria.estado', 'Revisado')
                             ->count();
       return view('admin.peluqueria-index', compact('peluquerias', 'contadorTurnos', 'admin', 'contadorTurnoNuevo', 'contadorTurnoReivsado'));
+    }
+
+    /**
+     * Lista todas los turnos para peluqueria para verificar disponibildad
+     * 
+     * @return \Illuminate\Http\Response
+     */
+    public function indexPeluqueriasVue()
+    {
+       $peluquerias = DB::table('peluqueria')
+                    ->select('peluqueria.fecha_peluqueria', 'peluqueria.hora_peluqueria')
+                    ->get();
+        return $peluquerias;
     }
 }

@@ -56,6 +56,12 @@ class CitasController extends Controller
             return redirect('/confirmar-cita/'.$request->id_mascota);
         }
 
+        //Validar que la hora de la cita sea mayor a la actual
+        if ($request->fecha_cita < $fechaActual) {
+            \Flash::error('No se puede agendar una cita en una fecha anterior a la actual');//Mensaje de Error
+            return redirect('/confirmar-cita/'.$request->id_mascota);
+        }
+
         // //Validar que no se agenden citas despues de las 3pm de la fecha actual
         // if ($request->fecha_cita == $fechaActual) {
         //     \Flash::error('No se puede agendar citas HOY despues de las 3:00 pm');
@@ -177,5 +183,18 @@ class CitasController extends Controller
                             ->where('citas.estado', 'Revisado')
                             ->count();
       return view('admin.citas-index', compact('citas', 'contadorCitas', 'admin', 'contadorCitasNuevas', 'contadorCitasRevisadas'));
+    }
+
+    /**
+     * Lista todas los turnos para citas para verificar disponibildad
+     * 
+     * @return \Illuminate\Http\Response
+     */
+    public function indexCitasVue()
+    {
+        $citas = DB::table('citas')
+                ->select('citas.fecha_cita', 'citas.hora_cita')
+                ->get();
+        return $citas;
     }
 }

@@ -49,7 +49,7 @@
 				<div class="sidebar-inner sidebar-push">
 					<ul class="nav nav-pills nav-stacked">
 						<li class="sidebar-header">Menú de Navegación</li>
-						<li><a href="{{ route('home') }}""><i class="zmdi zmdi-home"></i>Inicio</a></li>
+						<li><a href="{{ route('home') }}"><i class="zmdi zmdi-home"></i>Inicio</a></li>
 						<!-- User Profile -->
 						<li class="nav-dropdown active open"><a href="#"><i class="zmdi zmdi-account"></i>Perfil</a>
 							<ul class="nav-sub">
@@ -243,6 +243,7 @@
 
 			<script src="{{asset('assets/js/vendor.bundle.js')}}"></script>
 			<script src="{{asset('assets/js/app.bundle.js')}}"></script>
+			<script src="{{asset('js/app.js')}}"></script>
 		</body>
 
 		</html>

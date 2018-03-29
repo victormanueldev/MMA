@@ -81,3 +81,7 @@ Route::get('vacunas/{mascota}', 'PerfilVacunaController@show')->name('vacunas-sh
 Route::post('vacunas/aplicar', 'PerfilVacunaController@store')->name('perfilVacuna-store');
 Route::get('notificacion-vacunas', 'PerfilVacunaController@index')->name('notificacion-vacunas');
 Route::post('notificacion/vacuna/envio', 'PerfilVacunaController@smsMasivos')->name('sms-vacuna');
+
+//Vue Routes
+Route::get('citas-index', 'CitasController@indexCitasVue');
+Route::get('peluquerias-index', 'PeluqueriasController@indexPeluqueriasVue');

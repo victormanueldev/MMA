@@ -1,0 +1,15 @@
+[11-Feb-2018 00:56:59 UTC] PHP Warning:  require(/home/mundomas/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/mundomas/public_html/index.php on line 24
+[11-Feb-2018 00:56:59 UTC] PHP Fatal error:  require(): Failed opening required '/home/mundomas/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/mundomas/public_html/index.php on line 24
+[11-Feb-2018 01:00:10 UTC] PHP Warning:  require(/home/mundomas/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/mundomas/public_html/index.php on line 24
+[11-Feb-2018 01:00:10 UTC] PHP Fatal error:  require(): Failed opening required '/home/mundomas/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/mundomas/public_html/index.php on line 24
+[11-Feb-2018 01:03:47 UTC] PHP Warning:  require(/home/mundomas/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/mundomas/public_html/index.php on line 24
+[11-Feb-2018 01:03:47 UTC] PHP Fatal error:  require(): Failed opening required '/home/mundomas/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/mundomas/public_html/index.php on line 24
+[11-Feb-2018 01:03:47 UTC] PHP Warning:  require(/home/mundomas/public_html/../vendor/autoload.php): failed to open stream: No such file or directory in /home/mundomas/public_html/index.php on line 24
+[11-Feb-2018 01:03:47 UTC] PHP Fatal error:  require(): Failed opening required '/home/mundomas/public_html/../vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/mundomas/public_html/index.php on line 24
+[11-Feb-2018 01:19:13 UTC] PHP Warning:  symlink(): No such file or directory in /home/mundomas/public_html/symlink_create.php on line 2
+[10-Feb-2018 21:25:33 America/Bogota] PHP Fatal error:  Interface 'JsonSerializable' not found in /home/mundomas/mma/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 19
+[10-Feb-2018 21:25:48 America/Bogota] PHP Fatal error:  Interface 'JsonSerializable' not found in /home/mundomas/mma/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 19
+[10-Feb-2018 21:27:41 America/Bogota] PHP Fatal error:  Interface 'JsonSerializable' not found in /home/mundomas/mma/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 19
+[10-Feb-2018 21:29:15 America/Bogota] PHP Fatal error:  Interface 'JsonSerializable' not found in /home/mundomas/mma/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 19
+[11-Feb-2018 02:29:35 UTC] PHP Parse error:  syntax error, unexpected '?' in /home/mundomas/mma/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 233
+[13-Feb-2018 16:52:43 America/Bogota] PHP Fatal error:  Interface 'JsonSerializable' not found in /home/mundomas/mma/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 19

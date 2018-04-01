@@ -13438,7 +13438,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchData: function fetchData() {
             var _this = this;
 
-            var url = 'http://localhost:8000/citas-index'; //URL para traer los datos de la BD
+            var url = 'https://www.mundomascotascali.com/citas-index'; //URL para traer los datos de la BD
             axios.get(url).then(function (res) {
                 _this.citas = res.data; //Guarda los datos en el objeto
             }).catch(function (err) {
@@ -13450,7 +13450,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         disponibilidadCita: function disponibilidadCita() {
             var i = 0;
             var cont = 0;
-            this.nuevaCita.fecha_cita.replace(/^(\d{4})-(\d{2})-(\d{2})$/g, '$3/$2/$1'); //Cambia el formato de la fecha entrante
+            //this.nuevaCita.fecha_cita.replace(/^(\d{4})-(\d{2})-(\d{2})$/g,'$3/$2/$1');//Cambia el formato de la fecha entrante
             for (i in this.citas) {
                 //Compara todos los atributos del Objeto citas con los de nuevaCita
                 if (this.citas[i].hora_cita == this.nuevaCita.hora_cita && this.citas[i].fecha_cita == this.nuevaCita.fecha_cita) {
@@ -14152,7 +14152,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchDataP: function fetchDataP() {
             var _this = this;
 
-            var url = 'http://localhost:8000/peluquerias-index';
+            var url = 'https://www.mundomascotascali.com/peluquerias-index';
             axios.get(url).then(function (res) {
                 _this.peluquerias = res.data;
             }).catch(function (err) {
@@ -14164,7 +14164,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         disponibilidadTurno: function disponibilidadTurno() {
             var i = 0;
             var cont = 0;
-            this.nuevaPeluqueria.fecha_peluqueria.replace(/^(\d{4})-(\d{2})-(\d{2})$/g, '$3/$2/$1');
+            //this.nuevaPeluqueria.fecha_peluqueria.replace(/^(\d{4})-(\d{2})-(\d{2})$/g,'$3/$2/$1');
             for (i in this.peluquerias) {
                 if (this.peluquerias[i].hora_peluqueria == this.nuevaPeluqueria.hora_peluqueria && this.peluquerias[i].fecha_peluqueria == this.nuevaPeluqueria.fecha_peluqueria) {
                     cont++;

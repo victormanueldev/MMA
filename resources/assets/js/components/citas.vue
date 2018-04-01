@@ -115,7 +115,7 @@
         methods: {
             //Guarda todos los datos de la BD en el objeto citas
             fetchData(){
-                var url = 'http://localhost:8000/citas-index'//URL para traer los datos de la BD
+                var url = 'https://www.mundomascotascali.com/citas-index'//URL para traer los datos de la BD
                 axios.get(url)
                 .then((res) => {
                     this.citas = res.data//Guarda los datos en el objeto
@@ -129,7 +129,7 @@
             disponibilidadCita: function () {
                 var i = 0
                 var cont = 0
-                this.nuevaCita.fecha_cita.replace(/^(\d{4})-(\d{2})-(\d{2})$/g,'$3/$2/$1');//Cambia el formato de la fecha entrante
+                //this.nuevaCita.fecha_cita.replace(/^(\d{4})-(\d{2})-(\d{2})$/g,'$3/$2/$1');//Cambia el formato de la fecha entrante
                 for(i in this.citas){//Compara todos los atributos del Objeto citas con los de nuevaCita
                     if( this.citas[i].hora_cita == this.nuevaCita.hora_cita && this.citas[i].fecha_cita == this.nuevaCita.fecha_cita){
                         cont++

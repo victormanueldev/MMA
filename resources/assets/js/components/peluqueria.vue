@@ -90,7 +90,7 @@
         },
         methods: {
             fetchDataP(){
-                var url = 'http://localhost:8000/peluquerias-index'
+                var url = 'https://www.mundomascotascali.com/peluquerias-index'
                 axios.get(url)
                 .then((res) => {
                     this.peluquerias = res.data
@@ -104,7 +104,7 @@
             disponibilidadTurno: function () {
                 var i = 0
                 var cont = 0
-                this.nuevaPeluqueria.fecha_peluqueria.replace(/^(\d{4})-(\d{2})-(\d{2})$/g,'$3/$2/$1');
+                //this.nuevaPeluqueria.fecha_peluqueria.replace(/^(\d{4})-(\d{2})-(\d{2})$/g,'$3/$2/$1');
                 for(i in this.peluquerias){
                     if( this.peluquerias[i].hora_peluqueria == this.nuevaPeluqueria.hora_peluqueria && this.peluquerias[i].fecha_peluqueria == this.nuevaPeluqueria.fecha_peluqueria){
                         cont++

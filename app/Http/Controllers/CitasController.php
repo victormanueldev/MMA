@@ -7,6 +7,7 @@ use MundoMascotasApp\Http\Requests\CitasRequest;
 use Illuminate\Support\Facades\DB;
 use MundoMascotasApp\Mascota;
 use MundoMascotasApp\Cita;
+use MundoMascotasApp\Disponibilidad;
 use Carbon\Carbon;
 use Auth;
 
@@ -31,8 +32,33 @@ class CitasController extends Controller
     public function create($id)
     {
         //Consultar la Mascota por el $id de la URL
+        $dt = Carbon::now();
+        $fechaActual = $dt-> toDateString();
         $mascotas = Mascota::find($id);
-        return view('confirmar-cita', compact('mascotas'));
+        $disponibildad = Disponibilidad::all();
+        
+        $fi = '';
+        $ff = '';
+        $mot = '';
+        $jor = '';
+        foreach ($disponibildad as $disp) {
+            if($disp-> fecha_inicio == $fechaActual){
+                $fi = $disp-> fecha_inicio;
+                $ff = $disp-> fecha_fin;
+                $mot = $disp-> motivo;
+                $jor = $disp-> jornada;
+            }
+        }
+
+        return view('confirmar-cita', compact(
+            'mascotas',
+            'fi',
+            'ff',
+            'mot',
+            'jor',
+            'fechaActual'
+        ));
+
     }
 
     /**
@@ -45,7 +71,7 @@ class CitasController extends Controller
     {
 
         $cita = new Cita();//Instancia de la clase
-
+        $disponibildad = Disponibilidad::all();
         $ahora = Carbon::now();//Obtener la hora y la fecha acutal
         $fechaActual = $ahora->toDateString();//Obtener solo la fecha
         $horaActual = $ahora->toTimeString();//Obtener solo la hora
@@ -60,6 +86,17 @@ class CitasController extends Controller
         if ($request->fecha_cita < $fechaActual) {
             \Flash::error('No se puede agendar una cita en una fecha anterior a la actual');//Mensaje de Error
             return redirect('/confirmar-cita/'.$request->id_mascota);
+        }
+
+        //Validar que la cita no se agende en un periodo con disponibilidad nula
+        foreach ($disponibildad as $disp ) {
+           if($request-> fecha_cita == $disp-> fecha_inicio ){
+                \Flash::error('No se puede agendar la cita porque '.$disp-> motivo);//Mensaje de Error
+                return redirect('/confirmar-cita/'.$request->id_mascota);
+           }elseif ($request-> fecha_cita > $disp-> fecha_inicio && $request-> fecha_cita <= $disp-> fecha_fin) {
+                \Flash::error('No se puede agendar la cita porque no hay disponibilidad');//Mensaje de Error
+                return redirect('/confirmar-cita/'.$request->id_mascota);
+           }
         }
 
         // //Validar que no se agenden citas despues de las 3pm de la fecha actual

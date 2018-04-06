@@ -119,6 +119,7 @@
                                                        </header>
 
                                                        <section class="stepper-body">
+
                                                             <!-- Fecha de los Sintomas -->
                                                             <div class="form-group is-empty">
                                                             <label for="datepicker-theme" class="control-label">{{$mascotas->nombre_mascota}} presenta estos síntomas desde:</label>
@@ -147,6 +148,13 @@
                                                         <h3 class="hs">3. Agende su cita</h3>
                                                     </header>
                                                     <section class="stepper-body">
+                                                        @if($fi == $fechaActual || $fechaActual <= $ff)
+                                                            <p class="alert alert-danger" style="color: white;/*background-color: #f2a200;*/" ><strong>Importante:</strong> No habrá atención médica desde {{$fi}} hasta {{$ff}} en la(s) jornada(s) {{$jor}} por motivo de: <i>{{$mot}}</i></p>
+                                                        @elseif($fi == "")
+                                                            <p class="alert alert-danger" style="color: white;display: none/*background-color: #f2a200;*/" ><strong>Importante:</strong> No habrá atención médica desde 01/03/2018 hasta 02/03/2018 en la(s) jornada(s) Mañana y Tarde por motivo de: <i>El doctor no esta</i></p>
+                                                        @else
+                                                            <p class="alert alert-danger" style="color: white;display: none/*background-color: #f2a200;*/" ><strong>Importante:</strong> No habrá atención médica desde 01/03/2018 hasta 02/03/2018 en la(s) jornada(s) Mañana y Tarde por motivo de: <i>Condicion Final</i></p>
+                                                        @endif
                                                         <div id="app">
                                                             <citas></citas>
                                                         </div>

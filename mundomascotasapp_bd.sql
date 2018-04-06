@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-02-2018 a las 01:15:01
+-- Tiempo de generación: 01-04-2018 a las 02:18:51
 -- Versión del servidor: 5.7.18-log
 -- Versión de PHP: 7.1.7
 
@@ -63,6 +63,13 @@ CREATE TABLE `alimentacion` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `alimentacion`
+--
+
+INSERT INTO `alimentacion` (`id`, `tipo_alimento`, `marca`, `ultima_compra`, `frecuencia_compra`, `fecha_notificacion`, `cantidad_compra`, `id_user`, `created_at`, `updated_at`) VALUES
+(1, 'Mixto', 'Cualquier marca', '2018-02-04', 'semanal', '2018-03-04', '1 Kg', 6, '2018-02-11 00:19:57', '2018-03-29 17:48:53');
+
 -- --------------------------------------------------------
 
 --
@@ -80,6 +87,16 @@ CREATE TABLE `citas` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `citas`
+--
+
+INSERT INTO `citas` (`id`, `motivo`, `fecha_sintomas`, `fecha_cita`, `hora_cita`, `estado`, `id_mascota`, `created_at`, `updated_at`) VALUES
+(1, 'ha vomitado mucho', '2018-02-01', '2018-02-10', '10:30:00', 'Nuevo', 17, '2018-02-11 00:22:36', '2018-02-11 00:23:39'),
+(2, 'Citra 2.', '2018-03-21', '2018-02-28', '12:30:00', 'Nuevo', 17, '2018-03-28 19:08:44', '2018-03-28 19:08:44'),
+(3, 'Cita c', '2018-03-15', '2018-03-28', '11:30:00', 'Nuevo', 17, '2018-03-29 01:09:03', '2018-03-29 01:09:03'),
+(4, 'Cita 22', '2018-03-15', '2018-03-28', '12:30:00', 'Nuevo', 17, '2018-03-29 17:22:41', '2018-03-29 17:22:41');
 
 -- --------------------------------------------------------
 
@@ -103,6 +120,13 @@ CREATE TABLE `mascotas` (
   `created_at` date DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `mascotas`
+--
+
+INSERT INTO `mascotas` (`id`, `tipo_mascota`, `nombre_mascota`, `sexo_mascota`, `foto_mascota`, `fecha_nacimiento_mascota`, `raza`, `color`, `peso`, `tamano`, `esterilizado`, `id_usuario`, `created_at`, `updated_at`) VALUES
+(17, 'Perro', 'Teo', 'Macho', 'public/KgF9NsaVMDmGczoYHgMB9clhYZ6nS2TNbQEQBcYf.png', '2017-10-25', 'Criollo', 'Cafe', '6a13', 'mediano', 'No', 6, '2018-02-10', '2018-02-11 00:27:12');
 
 -- --------------------------------------------------------
 
@@ -147,6 +171,16 @@ CREATE TABLE `peluqueria` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `peluqueria`
+--
+
+INSERT INTO `peluqueria` (`id`, `servicio`, `especificacion_corte`, `fecha_peluqueria`, `hora_peluqueria`, `precio`, `estado`, `id_mascota`, `created_at`, `updated_at`) VALUES
+(1, 'Combo', 'Normal con guantes', '2018-02-10', '15:30:00', 25000, 'Nuevo', 17, '2018-02-11 00:24:24', '2018-02-11 00:24:24'),
+(2, 'Bano', 'asdas', '2018-03-07', '10:30:00', 22000, 'Nuevo', 17, '2018-03-29 01:52:18', '2018-03-29 01:52:18'),
+(3, 'Bano', 'asda', '2018-03-29', '12:30:00', 22000, 'Nuevo', 17, '2018-03-29 01:54:34', '2018-03-29 01:54:34'),
+(4, 'Combo', 'hola como esta', '2018-03-08', '11:30:00', 25000, 'Nuevo', 17, '2018-03-29 01:57:16', '2018-03-29 01:57:16');
+
 -- --------------------------------------------------------
 
 --
@@ -162,6 +196,13 @@ CREATE TABLE `perfilvacunacion` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `perfilvacunacion`
+--
+
+INSERT INTO `perfilvacunacion` (`id`, `id_mascota`, `id_vacuna`, `fecha_aplicacion`, `fecha_notificacion_vacuna`, `created_at`, `updated_at`) VALUES
+(1, 17, 1, '2018-05-21', '2018-06-05', '2018-02-11 00:19:04', '2018-02-11 00:19:04');
 
 -- --------------------------------------------------------
 
@@ -188,6 +229,13 @@ CREATE TABLE `users` (
   `created_at` date DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `tipo_documento`, `numero_documento`, `nombres`, `apellidos`, `barrio`, `direccion`, `telefono_fijo`, `telefono_movil`, `foto`, `fecha_nacimiento`, `genero`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(6, 'Cedula', 1061807769, 'Victor Manuel', 'Arenas Lopez', 'Los Guayacanes', 'Cra 2D # 62A -37', '3435021', '3103195394', 'public/cw7TQ0rWNwpyocFWDzcBjrKYkYEixtL3MLVcPZSz.jpeg', '2018-03-01', 'Masculino', 'victormalsx@gmail.com', '$2y$10$5fkz60EkL6AWLysGmS8Sjuo6jX/zDzrgjBeVcNX55A4m6phQ/QjGW', 'Yeh0pDOabebVetZSmWPxlUaPvu6JXWokljCUr8EriyBCtmsTjVArzs1zKvX0', '2018-02-10', '2018-03-29 17:24:37');
 
 -- --------------------------------------------------------
 
@@ -303,17 +351,17 @@ ALTER TABLE `administradores`
 -- AUTO_INCREMENT de la tabla `alimentacion`
 --
 ALTER TABLE `alimentacion`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `citas`
 --
 ALTER TABLE `citas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `mascotas`
 --
 ALTER TABLE `mascotas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT de la tabla `migrations`
 --
@@ -323,17 +371,17 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `peluqueria`
 --
 ALTER TABLE `peluqueria`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `perfilvacunacion`
 --
 ALTER TABLE `perfilvacunacion`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `vacunas`
 --

@@ -19,7 +19,7 @@ class CreatePeluqueriaTable extends Migration
             $table->string('especificacion_corte', 60);
             $table->date('fecha_peluqueria');
             $table->time('hora_peluqueria');
-            $table->integer('precio', 5)->unsigned();
+            $table->string('precio', 5);
             $table->string('estado', 8)->default('Nuevo');
             $table->integer('id_mascota')->unsigned();
             $table->foreign('id_mascota')->references('id')->on('mascotas');

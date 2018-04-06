@@ -66,7 +66,7 @@
                     </div>
             </div>
             <p class="alert alert-success" style="color: white;background-color: #26a69acc;" v-if="disponibilidadTurno"><strong>¡Turno Disponible!</strong> </p>
-                                        <p class="alert alert-danger" style="color: white;/*background-color: #26a69acc;*/" v-if="!disponibilidadTurno"><strong>¡Turno Ocupado!</strong>, por favor intente con otra hora o fecha</p>
+            <p class="alert alert-danger" style="color: white;/*background-color: #26a69acc;*/" v-if="!disponibilidadTurno"><strong>¡Turno Ocupado!</strong>, por favor intente con otra hora o fecha</p>
         </div>
 </template>
 

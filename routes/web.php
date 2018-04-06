@@ -85,3 +85,6 @@ Route::post('notificacion/vacuna/envio', 'PerfilVacunaController@smsMasivos')->n
 //Vue Routes
 Route::get('citas-index', 'CitasController@indexCitasVue');
 Route::get('peluquerias-index', 'PeluqueriasController@indexPeluqueriasVue');
+
+Route::get('disponibilidad', 'DisponibilidadController@index');
+Route::post('disponibilidad', 'DisponibilidadController@store')->name('disp-sotre');

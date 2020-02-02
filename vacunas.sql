@@ -27,47 +27,22 @@ SET time_zone = "+00:00";
 --
 -- Estructura de tabla para la tabla `vacunas`
 --
-
-CREATE TABLE `vacunas` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `nombre_vacuna` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
-  `frecuencia_aplicacion` varchar(9) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `etiqueta` varchar(20) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
 --
 -- Volcado de datos para la tabla `vacunas`
 --
 
-INSERT INTO `vacunas` (`id`, `nombre_vacuna`, `frecuencia_aplicacion`, `etiqueta`) VALUES
-(1, 'Puppy', 'quincenal', 'puppy.jpg'),
-(2, 'Quintuple', 'quincenal', 'quintuple.jpg'),
-(3, 'Séxtuple', 'quincenal', 'sextuple.jpg'),
-(4, 'KC', 'quincenal', 'kc.jpg'),
-(5, 'Triple Viral', 'quincenal', 'tvf.jpg'),
-(6, 'Leucemia', 'quincenal', 'leucogen.jpg'),
-(7, 'Vacuna Anual', 'anual', 'anualP.jpg'),
-(8, 'Vacuna Anual', 'anual', 'anualF.jpg');
+INSERT INTO `vacunas` (`nombre_vacuna`, `frecuencia_aplicacion`, `etiqueta`) VALUES
+('Puppy', 'quincenal', 'puppy.jpg'),
+('Quintuple', 'quincenal', 'quintuple.jpg'),
+('Séxtuple', 'quincenal', 'sextuple.jpg'),
+('KC', 'quincenal', 'kc.jpg'),
+('Triple Viral', 'quincenal', 'tvf.jpg'),
+('Leucemia', 'quincenal', 'leucogen.jpg'),
+('Vacuna Anual', 'anual', 'anualP.jpg'),
+('Vacuna Anual', 'anual', 'anualF.jpg');
 
 --
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `vacunas`
---
-ALTER TABLE `vacunas`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `vacunas`
---
-ALTER TABLE `vacunas`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

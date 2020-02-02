@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  laravel:
+    iamge: alpine:latest
+    ports:
+      - 80:80
+    links:
+      - mysql:mysql
+  
+  mysql:
+    image: mysql:5.7.29
+    command:
+      --default-authentication-plugin=mysqL_native_password
+    environment:
+      MYSQL_DATABASE: mundomascotasapp_bd
+      MYSQL_ROOT_PASSWORD: saxo
+    volumes:
+      - ~/docker/mysql-data:/var/lib/mysql

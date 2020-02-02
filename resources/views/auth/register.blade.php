@@ -1,7 +1,7 @@
 @extends('layouts.loginLayout')
 
 @section('wrapper')
-<div class="login-register" style="background-image:url(assets/images/background/fondo1.jpg);overflow: visible;height: 1100px;padding: 30px 0 0 0;">
+<div class="login-register" style="background-image:url(assets/images/background/fondo1.jpg);overflow: visible;padding: 30px 0 0 0;">
     <div class="login-box card" style="background-color: #ffffffb3;">
     <div class="card-body">
       <div class="l-block">

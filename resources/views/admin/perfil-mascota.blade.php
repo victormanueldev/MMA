@@ -137,8 +137,6 @@
 														 <option value="7">Vacuna Anual Perros</option>
 														 <option value="5">Triple Viral</option>
 														 <option value="6">Leucemia</option>
-														 <option value="9">Rabia (Gatos)</option>
-														 <option value="8">Vacuna Anual Gatos</option>
 													 </select>
 											 </div>
 											 <div class="form-group">

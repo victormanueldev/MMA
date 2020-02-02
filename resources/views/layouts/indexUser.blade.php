@@ -189,17 +189,14 @@
 										<!-- Nombre de la ultima vacuna -->
 										<div class="form-group">
 											<select class="form-control select" id="select_nombre_vacuna" name="nombre_ultima_vacuna">
-                        <option>Nombre de vacuna</option>
-                            <option value="1">Puppy</option>
-                            <option value="2">Quintuple</option>
+													<option>Nombre de vacuna</option>
+														<option value="1">Puppy</option>
+														<option value="2">Quintuple</option>
 														<option value="3">Sextuple</option>
 														<option value="4">KC</option>
 														<option value="7">Vacuna Anual</option>
-														<option value="5">Triple Viral (Gatos)</option>
-														<option value="6">Leucemia (Gatos)</option>
-														<option value="9">Rabia (Gatos)</option>
-														<option value="8">Vacuna Anual (Gatos)</option>
-														<option value="10">Ninguna</option>
+														<option value="5">Triple Viral </option>
+														<option value="6">Leucemia </option>
 											</select>
 										</div>
 										<!-- Ultima Vacuna -->

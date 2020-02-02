@@ -60,9 +60,9 @@ class MascotasController extends Controller
         }elseif ($request->tipo_mascota == 'Perro') {//Si esta vacio, agregar un valor por defecto
             $mascota->foto_mascota = 'default-pet.jpg';
         }elseif ($request->tipo_mascota == 'Gato') {
-            $mascota->foto_mascota = 'default-cat.jpg';
+            $mascota->foto_mascota = 'default-pet.jpg';
         }elseif ($request->tipo_mascota == 'Conejo') {
-            $mascota->foto_mascota = 'default-rabbit.jpg';
+            $mascota->foto_mascota = 'default-pet.jpg';
         }
 
         $mascota->fecha_nacimiento_mascota = $request->fecha_nacimiento_mascota;
